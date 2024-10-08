@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Løve & HTML Forklaring</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .description {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .store {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .store button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .store button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Løve & HTML Forklaring</h1>
+    </header>
+
+ 
+    <section>
+        <img width="30%" src="loeve.webp" alt="Løve" id="lionImage">
+        <div class="description">
+            <h2>Hvad er HTML?</h2>
+            <p>HTML (HyperText Markup Language) er det standard markup-sprog, som bruges til at lave websider. HTML beskriver strukturen af en webside ved hjælp af tags og elementer, såsom overskrifter, afsnit, billeder og links.</p>
+        </div>
+
+        <div class="store">
+            <h2>Indkøbssystem</h2>
+            <p>Vil du købe en løve-figur?</p>
+            <button onclick="addToCart()">Tilføj til kurv</button>
+            <p id="cartStatus"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Løve & HTML Forklaring. Alle rettigheder forbeholdes.</p>
+    </footer>
+
+    <script>
+        let cartItems = 0;
+
+        function addToCart() {
+            cartItems++;
+            document.getElementById('cartStatus').innerText = "Du har tilføjet " + cartItems + " løve-figur" + (cartItems > 1 ? "er" : "") + " til din kurv.";
+        }
+    </script>
+
+</body>
+</html>
